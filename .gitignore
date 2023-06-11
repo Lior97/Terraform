@@ -1,0 +1,8 @@
+.terraform/providers/*
+.terraform.lock.hcl
+.terraform/modules/modules.json
+.terraform.tfstate.lock.info
+terraform.tfstate
+terraform.tfstate.backup
+.terraform/modules/*
+Terraform/mysql-helm-values.yaml

@@ -1,0 +1,28 @@
+<<<<<<< HEAD
+# Complete CI/CD Pipeline with Terraform
+
+This project is an example of a complete CI\CD pipeline in jenkins, and demonstrates use of Jenkins, Terraform, Kubernetes, Docker, Git, AWS and Bash scripting.
+In summary: we want to run a Java web app that requires MYSQL, the pipeline will automatically set up all the neccessary infrastructure for running our app,
+reduce uneccessary costs while keeping our app highly available with minimum downtimes.
+
+Once set up, the pipeline will apply provision infrastracture for our EKS cluster, the cluster consists of:
+ - Cluster autoscaler for cost efficiency. 
+ - 1-3 EC2 instances for running the application (based on load).
+ - Nginx controller and ingress for web access to our app. 
+ - Create VPC for our cluster.
+ - Create necessary security group rules.
+ - Attach policies (as found in Kubernetes/AWS-Policies/) to the cluster autoscaler and CSI driver.
+ - Use env.vars for sensitive data to eliminate security risks.
+
+In addition, The pipeline will perform the following
+ - Run MYSQL stateful set with 1 primary and 2 secondary pods, as well it will provision GP2 storage for our database.
+ - Automatically increment version of our app.
+ - Build the app (as found in /app/) and create a docker image for further deployment of our app, then push it to a private ECR.
+ - Deploy the app to our cluster in a 3 pod replicaset for high availability, using our own helm chart (java-mysql-app as found in Kubernetes/).
+ - If deployment successful it will push the dockerized app to a public DockerHub repository.
+ - Update github /app/build.gradle with the latest app version.
+ 
+Check Jenkinsfile for more information.
+=======
+# Terraform
+>>>>>>> d95bba3d722c43e4be249d0a397544c259cb7fd6
