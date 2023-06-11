@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Complete CI/CD Pipeline with Terraform
 
 This project is an example of a complete CI\CD pipeline in jenkins, and demonstrates use of Jenkins, Terraform, Kubernetes, Docker, Git, AWS and Bash scripting.
@@ -23,6 +22,4 @@ In addition, The pipeline will perform the following
  - Update github /app/build.gradle with the latest app version.
  
 Check Jenkinsfile for more information.
-=======
-# Terraform
->>>>>>> d95bba3d722c43e4be249d0a397544c259cb7fd6
+
